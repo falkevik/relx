@@ -661,7 +661,7 @@ case "$1" in
         __code_paths=""
         FOREGROUNDOPTIONS=""
         # .boot file typically just $REL_NAME (ie, the app name)
-        # however, for debugging, sometimes start_clean.boot is useful.
+        # however, for debugging, sometimes console_clean.boot is useful.
         # For e.g. 'setup', one may even want to name another boot script.
         case "$1" in
             console)
@@ -684,7 +684,7 @@ case "$1" in
             console_clean)
                 # if not set by user use interactive mode for console_clean
                 CODE_LOADING_MODE="${CODE_LOADING_MODE:-interactive}"
-                BOOTFILE="$ROOTDIR/bin/start_clean"
+                BOOTFILE="$ROOTDIR/bin/console_clean"
                 ;;
             console_boot)
                 shift
